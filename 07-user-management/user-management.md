@@ -116,3 +116,14 @@ Linuxでは、ユーザーごとに権限やグループを設定できる。
 `su - testuser` を実行し、作成したユーザーに切り替えた。
 
 `whoami` を実行し、現在のユーザーが `testuser` になっていることを確認した。
+## sudoグループへの追加
+
+`sudo usermod -aG sudo testuser` を実行し、`testuser` を `sudo` グループに追加した。
+
+`groups testuser` を実行し、`testuser` の所属グループに `sudo` が含まれていることを確認した。
+
+その後、`su - testuser` で `testuser` に切り替え、`sudo whoami` を実行した。
+
+結果として `root` と表示され、`testuser` がsudo権限を使えることを確認した。
+
+また、`usermod` のオプション指定では `-aG` をまとめて入力する必要があることも確認した。
