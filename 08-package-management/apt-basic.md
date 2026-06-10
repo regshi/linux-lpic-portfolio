@@ -105,3 +105,19 @@ Ubuntuでは `apt` を使ってソフトウェアを管理する。
 インフラ作業では、必要なサービスをインストールしたり、セキュリティ更新を適用したりするために、パッケージ管理の理解が重要。
 
 特に `apt update` と `apt upgrade` の違いを理解することが大切だと学んだ。
+## 実行メモ
+
+`sudo apt update` を実行し、パッケージ情報を更新した。
+
+`apt search nginx` を実行し、Nginx関連のパッケージを検索した。
+
+`apt show openssh-server` を実行し、OpenSSH Serverパッケージの詳細情報を確認した。
+
+`apt list --installed | grep openssh` を実行し、OpenSSH関連のパッケージがインストールされていることを確認した。
+
+確認できた主なパッケージは以下の通り。
+
+```text
+openssh-client
+openssh-server
+openssh-sftp-server
